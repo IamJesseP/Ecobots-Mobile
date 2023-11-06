@@ -40,7 +40,7 @@
 		38C45CC92AF8A20C00E99CED = {
 			isa = PBXGroup;
 			children = (
-				38C45CD42AF8A20C00E99CED /* cp */,
+				38C45CD42AF8A20C00E99CED /* Ecobots */,
 				38C45CD32AF8A20C00E99CED /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		38C45CD42AF8A20C00E99CED /* cp */ = {
+		38C45CD42AF8A20C00E99CED /* Ecobots */ = {
 			isa = PBXGroup;
 			children = (
 				38C45CD52AF8A20C00E99CED /* AppDelegate.swift */,
@@ -64,7 +64,7 @@
 				38C45CE02AF8A20E00E99CED /* LaunchScreen.storyboard */,
 				38C45CE32AF8A20E00E99CED /* Info.plist */,
 			);
-			path = cp;
+			path = Ecobots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 38C45CCD2AF8A20C00E99CED /* Build configuration list for PBXProject "cp" */;
+			buildConfigurationList = 38C45CCD2AF8A20C00E99CED /* Build configuration list for PBXProject "Ecobots" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -337,7 +337,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38C45CCD2AF8A20C00E99CED /* Build configuration list for PBXProject "cp" */ = {
+		38C45CCD2AF8A20C00E99CED /* Build configuration list for PBXProject "Ecobots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38C45CE42AF8A20E00E99CED /* Debug */,
