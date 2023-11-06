@@ -87,12 +87,9 @@ An intuitive platform to quantify the significance of their recycling practices.
 
 ## Wireframes
 
-[Add picture of your hand sketched wireframes in this section]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+<img width="488" alt="image" src="https://github.com/IamJesseP/Ecobots-Mobile/assets/108151191/551fa76e-774e-4749-8627-844e6ff7ad19">
 
-### [BONUS] Digital Wireframes & Mockups
 
-### [BONUS] Interactive Prototype
 
 ## Schema 
 
