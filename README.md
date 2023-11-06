@@ -99,8 +99,35 @@ An intuitive platform to quantify the significance of their recycling practices.
 
 [Add table of models]
 
-### Networking
+### Sprints
 
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+**Main functionalities:**
+* Users can register and login
+* Users can take pics and have them analyzed
+* Users can access history of analyzed data
+* Users can add friends, view each others history
+
+**Sprint 1:**
+* Planning and wireframing
+* <div>
+    <a href="https://www.loom.com/share/5fa0a146ea2846a6a41ea33a7269c99d">
+    </a>
+    <a href="https://www.loom.com/share/5fa0a146ea2846a6a41ea33a7269c99d">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/5fa0a146ea2846a6a41ea33a7269c99d-with-play.gif">
+    </a>
+  </div>
+
+  
+**Sprint 2:**
+* Add core functionality:
+     * Tab navigation
+     * Camera access
+     * API networking
+     *  Data display
+ 
+  
+**Sprint 3:**
+* Add optional functionality:
+  * Auth
+  * Db access and display according to user
+
