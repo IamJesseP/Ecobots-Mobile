@@ -7,27 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		38C45CD62AF8A20C00E99CED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C45CD52AF8A20C00E99CED /* AppDelegate.swift */; };
-		38C45CD82AF8A20C00E99CED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C45CD72AF8A20C00E99CED /* SceneDelegate.swift */; };
-		38C45CDA2AF8A20C00E99CED /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38C45CD92AF8A20C00E99CED /* ViewController.swift */; };
-		38C45CDD2AF8A20C00E99CED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C45CDB2AF8A20C00E99CED /* Main.storyboard */; };
-		38C45CDF2AF8A20E00E99CED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38C45CDE2AF8A20E00E99CED /* Assets.xcassets */; };
-		38C45CE22AF8A20E00E99CED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38C45CE02AF8A20E00E99CED /* LaunchScreen.storyboard */; };
+		382B99042AFEA89C0072DF3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382B99032AFEA89C0072DF3E /* AppDelegate.swift */; };
+		382B99062AFEA89C0072DF3E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382B99052AFEA89C0072DF3E /* SceneDelegate.swift */; };
+		382B99082AFEA89C0072DF3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382B99072AFEA89C0072DF3E /* ViewController.swift */; };
+		382B990B2AFEA89C0072DF3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382B99092AFEA89C0072DF3E /* Main.storyboard */; };
+		382B990D2AFEA89D0072DF3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 382B990C2AFEA89D0072DF3E /* Assets.xcassets */; };
+		382B99102AFEA89D0072DF3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382B990E2AFEA89D0072DF3E /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		38C45CD22AF8A20C00E99CED /* cp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		38C45CD52AF8A20C00E99CED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		38C45CD72AF8A20C00E99CED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		38C45CD92AF8A20C00E99CED /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		38C45CDC2AF8A20C00E99CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		38C45CDE2AF8A20E00E99CED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		38C45CE12AF8A20E00E99CED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		38C45CE32AF8A20E00E99CED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		382B99002AFEA89C0072DF3E /* EcoBots.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoBots.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		382B99032AFEA89C0072DF3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		382B99052AFEA89C0072DF3E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		382B99072AFEA89C0072DF3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		382B990A2AFEA89C0072DF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		382B990C2AFEA89D0072DF3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		382B990F2AFEA89D0072DF3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		382B99112AFEA89D0072DF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		38C45CCF2AF8A20C00E99CED /* Frameworks */ = {
+		382B98FD2AFEA89C0072DF3E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -37,72 +37,72 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		38C45CC92AF8A20C00E99CED = {
+		382B98F72AFEA89C0072DF3E = {
 			isa = PBXGroup;
 			children = (
-				38C45CD42AF8A20C00E99CED /* Ecobots */,
-				38C45CD32AF8A20C00E99CED /* Products */,
+				382B99022AFEA89C0072DF3E /* EcoBots */,
+				382B99012AFEA89C0072DF3E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		38C45CD32AF8A20C00E99CED /* Products */ = {
+		382B99012AFEA89C0072DF3E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38C45CD22AF8A20C00E99CED /* cp.app */,
+				382B99002AFEA89C0072DF3E /* EcoBots.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		38C45CD42AF8A20C00E99CED /* Ecobots */ = {
+		382B99022AFEA89C0072DF3E /* EcoBots */ = {
 			isa = PBXGroup;
 			children = (
-				38C45CD52AF8A20C00E99CED /* AppDelegate.swift */,
-				38C45CD72AF8A20C00E99CED /* SceneDelegate.swift */,
-				38C45CD92AF8A20C00E99CED /* ViewController.swift */,
-				38C45CDB2AF8A20C00E99CED /* Main.storyboard */,
-				38C45CDE2AF8A20E00E99CED /* Assets.xcassets */,
-				38C45CE02AF8A20E00E99CED /* LaunchScreen.storyboard */,
-				38C45CE32AF8A20E00E99CED /* Info.plist */,
+				382B99032AFEA89C0072DF3E /* AppDelegate.swift */,
+				382B99052AFEA89C0072DF3E /* SceneDelegate.swift */,
+				382B99072AFEA89C0072DF3E /* ViewController.swift */,
+				382B99092AFEA89C0072DF3E /* Main.storyboard */,
+				382B990C2AFEA89D0072DF3E /* Assets.xcassets */,
+				382B990E2AFEA89D0072DF3E /* LaunchScreen.storyboard */,
+				382B99112AFEA89D0072DF3E /* Info.plist */,
 			);
-			path = Ecobots;
+			path = EcoBots;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38C45CD12AF8A20C00E99CED /* cp */ = {
+		382B98FF2AFEA89C0072DF3E /* EcoBots */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38C45CE62AF8A20E00E99CED /* Build configuration list for PBXNativeTarget "cp" */;
+			buildConfigurationList = 382B99142AFEA89D0072DF3E /* Build configuration list for PBXNativeTarget "EcoBots" */;
 			buildPhases = (
-				38C45CCE2AF8A20C00E99CED /* Sources */,
-				38C45CCF2AF8A20C00E99CED /* Frameworks */,
-				38C45CD02AF8A20C00E99CED /* Resources */,
+				382B98FC2AFEA89C0072DF3E /* Sources */,
+				382B98FD2AFEA89C0072DF3E /* Frameworks */,
+				382B98FE2AFEA89C0072DF3E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = cp;
-			productName = cp;
-			productReference = 38C45CD22AF8A20C00E99CED /* cp.app */;
+			name = EcoBots;
+			productName = EcoBots;
+			productReference = 382B99002AFEA89C0072DF3E /* EcoBots.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		38C45CCA2AF8A20C00E99CED /* Project object */ = {
+		382B98F82AFEA89C0072DF3E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
-					38C45CD12AF8A20C00E99CED = {
+					382B98FF2AFEA89C0072DF3E = {
 						CreatedOnToolsVersion = 14.3.1;
 					};
 				};
 			};
-			buildConfigurationList = 38C45CCD2AF8A20C00E99CED /* Build configuration list for PBXProject "Ecobots" */;
+			buildConfigurationList = 382B98FB2AFEA89C0072DF3E /* Build configuration list for PBXProject "EcoBots" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -110,55 +110,55 @@
 				en,
 				Base,
 			);
-			mainGroup = 38C45CC92AF8A20C00E99CED;
-			productRefGroup = 38C45CD32AF8A20C00E99CED /* Products */;
+			mainGroup = 382B98F72AFEA89C0072DF3E;
+			productRefGroup = 382B99012AFEA89C0072DF3E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38C45CD12AF8A20C00E99CED /* cp */,
+				382B98FF2AFEA89C0072DF3E /* EcoBots */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		38C45CD02AF8A20C00E99CED /* Resources */ = {
+		382B98FE2AFEA89C0072DF3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38C45CE22AF8A20E00E99CED /* LaunchScreen.storyboard in Resources */,
-				38C45CDF2AF8A20E00E99CED /* Assets.xcassets in Resources */,
-				38C45CDD2AF8A20C00E99CED /* Main.storyboard in Resources */,
+				382B99102AFEA89D0072DF3E /* LaunchScreen.storyboard in Resources */,
+				382B990D2AFEA89D0072DF3E /* Assets.xcassets in Resources */,
+				382B990B2AFEA89C0072DF3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		38C45CCE2AF8A20C00E99CED /* Sources */ = {
+		382B98FC2AFEA89C0072DF3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38C45CDA2AF8A20C00E99CED /* ViewController.swift in Sources */,
-				38C45CD62AF8A20C00E99CED /* AppDelegate.swift in Sources */,
-				38C45CD82AF8A20C00E99CED /* SceneDelegate.swift in Sources */,
+				382B99082AFEA89C0072DF3E /* ViewController.swift in Sources */,
+				382B99042AFEA89C0072DF3E /* AppDelegate.swift in Sources */,
+				382B99062AFEA89C0072DF3E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		38C45CDB2AF8A20C00E99CED /* Main.storyboard */ = {
+		382B99092AFEA89C0072DF3E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				38C45CDC2AF8A20C00E99CED /* Base */,
+				382B990A2AFEA89C0072DF3E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		38C45CE02AF8A20E00E99CED /* LaunchScreen.storyboard */ = {
+		382B990E2AFEA89D0072DF3E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				38C45CE12AF8A20E00E99CED /* Base */,
+				382B990F2AFEA89D0072DF3E /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -166,7 +166,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		38C45CE42AF8A20E00E99CED /* Debug */ = {
+		382B99122AFEA89D0072DF3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -226,7 +226,7 @@
 			};
 			name = Debug;
 		};
-		38C45CE52AF8A20E00E99CED /* Release */ = {
+		382B99132AFEA89D0072DF3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -280,7 +280,7 @@
 			};
 			name = Release;
 		};
-		38C45CE72AF8A20E00E99CED /* Debug */ = {
+		382B99152AFEA89D0072DF3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -288,7 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = cp/Info.plist;
+				INFOPLIST_FILE = EcoBots/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -299,7 +299,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CodePath.cp;
+				PRODUCT_BUNDLE_IDENTIFIER = CodePath.EcoBots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -307,7 +307,7 @@
 			};
 			name = Debug;
 		};
-		38C45CE82AF8A20E00E99CED /* Release */ = {
+		382B99162AFEA89D0072DF3E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -315,7 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = cp/Info.plist;
+				INFOPLIST_FILE = EcoBots/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -326,7 +326,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = CodePath.cp;
+				PRODUCT_BUNDLE_IDENTIFIER = CodePath.EcoBots;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -337,25 +337,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38C45CCD2AF8A20C00E99CED /* Build configuration list for PBXProject "Ecobots" */ = {
+		382B98FB2AFEA89C0072DF3E /* Build configuration list for PBXProject "EcoBots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38C45CE42AF8A20E00E99CED /* Debug */,
-				38C45CE52AF8A20E00E99CED /* Release */,
+				382B99122AFEA89D0072DF3E /* Debug */,
+				382B99132AFEA89D0072DF3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38C45CE62AF8A20E00E99CED /* Build configuration list for PBXNativeTarget "cp" */ = {
+		382B99142AFEA89D0072DF3E /* Build configuration list for PBXNativeTarget "EcoBots" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				38C45CE72AF8A20E00E99CED /* Debug */,
-				38C45CE82AF8A20E00E99CED /* Release */,
+				382B99152AFEA89D0072DF3E /* Debug */,
+				382B99162AFEA89D0072DF3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 38C45CCA2AF8A20C00E99CED /* Project object */;
+	rootObject = 382B98F82AFEA89C0072DF3E /* Project object */;
 }
