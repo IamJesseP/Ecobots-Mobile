@@ -12,6 +12,10 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Use responseData here to update UI
+        // Example of using responseData to update UI
+        if let responseData = responseData {
+            print(responseData)
+        }
     }
 }
+

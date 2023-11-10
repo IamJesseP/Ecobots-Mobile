@@ -98,11 +98,11 @@ class RecycleViewController: UIViewController, UIImagePickerControllerDelegate, 
             let response = responseObj.result
 
             // Use the response data as needed
-            print("Response: \(response.response)")
-            print("Carbon Footprint: \(response.carbonFootprint)")
-            print("Facts: \(response.facts.joined(separator: ", "))")
-            print("Recycling Tip: \(response.recyclingTip)")
-            print("Resource Conservation: \(response.resourceConservation)")
+//            print("Response: \(response.response)")
+//            print("Carbon Footprint: \(response.carbonFootprint)")
+//            print("Facts: \(response.facts.joined(separator: ", "))")
+//            print("Recycling Tip: \(response.recyclingTip)")
+//            print("Resource Conservation: \(response.resourceConservation)")
 
             // Update UI or perform other actions with the decoded data
             DispatchQueue.main.async {
@@ -114,14 +114,13 @@ class RecycleViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetailSegue" {
+        if segue.identifier == "DetailView" { // This should match the identifier used in performSegue
             if let destinationVC = segue.destination as? DetailViewController,
                let dataToSend = sender as? ResponseData {
                 destinationVC.responseData = dataToSend
             }
         }
     }
-
 
 
     
