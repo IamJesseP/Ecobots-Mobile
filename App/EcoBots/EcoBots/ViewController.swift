@@ -40,10 +40,91 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     private func handleCapturedImage(_ image: UIImage) {
-        print("Image captured")
-        // Do something with the image, e.g., display it in a UIImageView
+        guard let imageData = image.jpegData(compressionQuality: 1.0) else {
+            // Handle the error of image conversion
+            return
+        }
+        sendImageToAPI(imageData: imageData, imageName: "photo")
+
     }
 
+    
+    func sendImageToAPI(imageData: Data, imageName: String) {
+        let url = URL(string: "http://127.0.0.1:4000/recycle")!
+        let request = createMultipartRequest(url: url, imageData: imageData, imageName: imageName)
+
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                // Handle error
+                print("Error: \(error)")
+                return
+            }
+            if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
+                // Process the response
+                self.handleServerResponse(data)
+            } else {
+                print("error11 \(error)")
+            }
+        }
+        task.resume()
+    }
+    
+    func createMultipartRequest(url: URL, imageData: Data, imageName: String) -> URLRequest {
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+
+        let boundary = "Boundary-\(UUID().uuidString)"
+        request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+
+        var body = Data()
+
+        body.append("--\(boundary)\r\n".data(using: .utf8)!)
+        body.append("Content-Disposition: form-data; name=\"photo\"; filename=\"\(imageName)\"\r\n".data(using: .utf8)!)
+        body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+        body.append(imageData)
+        body.append("\r\n".data(using: .utf8)!)
+        body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+
+        request.httpBody = body
+
+        return request
+    }
+
+
+    struct YourResponseType: Codable {
+        struct Result: Codable {
+            let response: String
+            let carbonFootprint: String
+            let facts: [String]
+            let recyclingTip: String
+            let resourceConservation: String
+        }
+
+        let result: Result
+    }
+
+    func handleServerResponse(_ data: Data) {
+        do {
+            let responseObj = try JSONDecoder().decode(YourResponseType.self, from: data)
+            let response = responseObj.result
+
+            // Use the response data as needed
+            print("Response: \(response.response)")
+            print("Carbon Footprint: \(response.carbonFootprint)")
+            print("Facts: \(response.facts.joined(separator: ", "))")
+            print("Recycling Tip: \(response.recyclingTip)")
+            print("Resource Conservation: \(response.resourceConservation)")
+
+            // Update UI or perform other actions with the decoded data
+        } catch {
+            // Handle JSON parsing error
+            print("JSON Error: \(error)")
+        }
+    }
+
+
+
+    
     private func showAlert(withTitle title: String, message: String) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
