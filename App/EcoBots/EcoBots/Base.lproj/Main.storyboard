@@ -15,17 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="test" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kfc-D3-MMa">
-                                <rect key="frame" x="100" y="313" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.98039215800000001" green="0.96862745289999996" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                     <navigationItem key="navigationItem" id="KXB-rQ-3tm"/>
                 </viewController>
@@ -59,8 +50,39 @@
                     <view key="view" contentMode="scaleToFill" id="7Bp-S3-D5Z">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snap a pic of your recyclable to start visualizing your impact!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFk-sZ-gLa">
+                                <rect key="frame" x="78.666666666666686" y="376" width="236" height="73"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="D4s-Nh-bj3"/>
+                                    <constraint firstAttribute="width" constant="236" id="n2t-HU-a8b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bL6-YU-4Kc">
+                                <rect key="frame" x="136" y="471" width="121" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="Bmw-Z5-JVJ"/>
+                                    <constraint firstAttribute="width" constant="121" id="MHg-Cw-Dni"/>
+                                </constraints>
+                                <color key="tintColor" red="0.40392160420000001" green="0.78823530669999997" blue="0.61176472900000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Recycle" cornerStyle="medium"/>
+                                <connections>
+                                    <action selector="recycleButton:" destination="e1n-9e-aNF" eventType="touchUpInside" id="m4P-um-5ji"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="gK2-oT-Ck1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UFk-sZ-gLa" firstAttribute="top" secondItem="gK2-oT-Ck1" secondAttribute="top" constant="273" id="1Ji-x7-JkK"/>
+                            <constraint firstItem="UFk-sZ-gLa" firstAttribute="centerX" secondItem="7Bp-S3-D5Z" secondAttribute="centerX" id="9p3-jh-8UB"/>
+                            <constraint firstItem="bL6-YU-4Kc" firstAttribute="centerX" secondItem="7Bp-S3-D5Z" secondAttribute="centerX" id="f6N-db-Faw"/>
+                            <constraint firstItem="bL6-YU-4Kc" firstAttribute="top" secondItem="UFk-sZ-gLa" secondAttribute="bottom" constant="22" id="yyh-L1-5Rb"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xCr-oO-ZxO"/>
                 </viewController>
