@@ -7,13 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+class RecycleViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var recycleLabel: UILabel!
     @IBAction func recycleButton(_ sender: Any) {
         #if targetEnvironment(simulator)
         // Use a mock image when running on the simulator
@@ -63,7 +64,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 // Process the response
                 self.handleServerResponse(data)
             } else {
-                print("error11 \(error)")
+                print("error")
             }
         }
         task.resume()
@@ -91,21 +92,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
 
-    struct YourResponseType: Codable {
-        struct Result: Codable {
-            let response: String
-            let carbonFootprint: String
-            let facts: [String]
-            let recyclingTip: String
-            let resourceConservation: String
-        }
-
-        let result: Result
-    }
-
     func handleServerResponse(_ data: Data) {
         do {
-            let responseObj = try JSONDecoder().decode(YourResponseType.self, from: data)
+            let responseObj = try JSONDecoder().decode(ResponseData.self, from: data)
             let response = responseObj.result
 
             // Use the response data as needed
@@ -116,9 +105,20 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("Resource Conservation: \(response.resourceConservation)")
 
             // Update UI or perform other actions with the decoded data
+            DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "DetailView", sender: responseObj)
+                    }
         } catch {
             // Handle JSON parsing error
             print("JSON Error: \(error)")
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetailSegue" {
+            if let destinationVC = segue.destination as? DetailViewController,
+               let dataToSend = sender as? ResponseData {
+                destinationVC.responseData = dataToSend
+            }
         }
     }
 

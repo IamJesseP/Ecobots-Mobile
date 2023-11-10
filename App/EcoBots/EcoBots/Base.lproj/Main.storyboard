@@ -30,6 +30,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Bs8-3a-P6A" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YLi-wN-Hq6">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -43,10 +44,10 @@
             </objects>
             <point key="canvasLocation" x="46.564885496183201" y="-2.1126760563380285"/>
         </scene>
-        <!--View Controller-->
+        <!--Recycle View Controller-->
         <scene sceneID="WqT-yx-Xf4">
             <objects>
-                <viewController id="e1n-9e-aNF" customClass="ViewController" customModule="EcoBots" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e1n-9e-aNF" customClass="RecycleViewController" customModule="EcoBots" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Bp-S3-D5Z">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,10 +86,30 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xCr-oO-ZxO"/>
+                    <connections>
+                        <outlet property="recycleLabel" destination="UFk-sZ-gLa" id="0RF-QP-5eP"/>
+                        <segue destination="shS-un-vM3" kind="show" identifier="DetailView" id="Am8-qw-aex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WLf-k1-iLf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1898.4732824427481" y="741.54929577464793"/>
+            <point key="canvasLocation" x="1865" y="742"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="UYx-6a-IOj">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="shS-un-vM3" customClass="DetailViewController" customModule="EcoBots" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nNY-0a-5Pm">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Qtz-bP-NaI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RQp-5O-3Js"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aHX-bQ-Jgj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2758" y="742"/>
         </scene>
         <!--Feed-->
         <scene sceneID="IJd-1r-ypz">
