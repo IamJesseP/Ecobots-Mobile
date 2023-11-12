@@ -9,10 +9,9 @@ import UIKit
 
 class RecycleInfoViewController: UIViewController {
     var data: String?
-    
+    var receivedState : DetailViewController.DetailViewState?
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     

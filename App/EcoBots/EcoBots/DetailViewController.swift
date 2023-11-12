@@ -70,6 +70,7 @@ class DetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RecycleInfo",
            let destinationVC = segue.destination as? RecycleInfoViewController {
+            destinationVC.receivedState = currentState
             switch currentState {
             case .carbonFootprint:
                 destinationVC.data = responseData?.result.carbonFootprint

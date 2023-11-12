@@ -11,11 +11,21 @@ class RecycleViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadingIcon.isHidden = true
+        loadingLabel.isHidden = true
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var loadingLabel: UILabel!
+    @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
     @IBOutlet weak var recycleLabel: UILabel!
+    
+    
     @IBAction func recycleButton(_ sender: Any) {
+        
+        loadingIcon.isHidden = false
+        loadingLabel.isHidden = false
+        
         #if targetEnvironment(simulator)
         // Use a mock image when running on the simulator
         self.handleCapturedImage(UIImage(named: "MockImage")!)
@@ -106,7 +116,9 @@ class RecycleViewController: UIViewController, UIImagePickerControllerDelegate, 
 
             // Update UI or perform other actions with the decoded data
             DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "DetailView", sender: responseObj)
+                    self.performSegue(withIdentifier: "DetailView", sender: responseObj)
+                    self.loadingIcon.isHidden = true
+                    self.loadingLabel.isHidden = true
                     }
         } catch {
             // Handle JSON parsing error

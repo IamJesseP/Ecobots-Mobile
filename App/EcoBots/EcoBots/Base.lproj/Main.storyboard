@@ -94,18 +94,41 @@
                                     <action selector="recycleButton:" destination="e1n-9e-aNF" eventType="touchUpInside" id="m4P-um-5ji"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="479-AQ-9Rt">
+                                <rect key="frame" x="170.66666666666666" y="228" width="52" height="52"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="07G-hp-zEO"/>
+                                    <constraint firstAttribute="width" constant="52" id="ED1-Lp-Upz"/>
+                                </constraints>
+                            </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Analyzing your item" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKP-FV-nP3">
+                                <rect key="frame" x="157.66666666666666" y="266" width="78" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="78" id="f5R-hS-c7V"/>
+                                    <constraint firstAttribute="height" constant="46" id="qX2-sF-Cfs"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.42785103079999998" green="0.4385754348" blue="0.49711963380000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gK2-oT-Ck1"/>
                         <color key="backgroundColor" red="0.98039215800000001" green="0.96862745289999996" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="UFk-sZ-gLa" firstAttribute="top" secondItem="gK2-oT-Ck1" secondAttribute="top" constant="273" id="a4H-Hm-bex"/>
+                            <constraint firstItem="HKP-FV-nP3" firstAttribute="centerX" secondItem="7Bp-S3-D5Z" secondAttribute="centerX" id="b5S-YF-eLc"/>
                             <constraint firstItem="bL6-YU-4Kc" firstAttribute="centerX" secondItem="7Bp-S3-D5Z" secondAttribute="centerX" id="bEh-O5-RwU"/>
+                            <constraint firstItem="HKP-FV-nP3" firstAttribute="top" secondItem="gK2-oT-Ck1" secondAttribute="top" constant="163" id="eN4-6K-jHY"/>
                             <constraint firstItem="UFk-sZ-gLa" firstAttribute="centerX" secondItem="7Bp-S3-D5Z" secondAttribute="centerX" id="ehk-sg-aIx"/>
                             <constraint firstItem="bL6-YU-4Kc" firstAttribute="top" secondItem="UFk-sZ-gLa" secondAttribute="bottom" constant="20" id="iyO-uV-U2a"/>
+                            <constraint firstItem="479-AQ-9Rt" firstAttribute="centerX" secondItem="7Bp-S3-D5Z" secondAttribute="centerX" id="l9N-k7-M8r"/>
+                            <constraint firstItem="479-AQ-9Rt" firstAttribute="top" secondItem="gK2-oT-Ck1" secondAttribute="top" constant="125" id="lLZ-Vm-Wb1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xCr-oO-ZxO"/>
                     <connections>
+                        <outlet property="loadingIcon" destination="479-AQ-9Rt" id="LDw-ys-rLb"/>
+                        <outlet property="loadingLabel" destination="HKP-FV-nP3" id="LCw-Rx-a3s"/>
                         <outlet property="recycleLabel" destination="UFk-sZ-gLa" id="0RF-QP-5eP"/>
                         <segue destination="shS-un-vM3" kind="show" identifier="DetailView" id="Am8-qw-aex"/>
                     </connections>
@@ -122,9 +145,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plS-Y6-nwP">
-                                <rect key="frame" x="81" y="276" width="228" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plS-Y6-nwP">
+                                <rect key="frame" x="82.666666666666686" y="276" width="228" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="228" id="Xso-3I-mf2"/>
+                                    <constraint firstAttribute="height" constant="74" id="xSw-0H-Za4"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Your impact at a glance">
                                         <attributes>
@@ -135,13 +161,19 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CardBoardCard" translatesAutoresizingMaskIntoConstraints="NO" id="vxF-FW-9wW">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="CardBoardCard" translatesAutoresizingMaskIntoConstraints="NO" id="vxF-FW-9wW">
                                 <rect key="frame" x="0.0" y="-17" width="393" height="258"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="258" id="Kab-dD-yJT"/>
+                                    <constraint firstAttribute="width" constant="393" id="qwW-gZ-T6d"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmS-in-nCO">
-                                <rect key="frame" x="82" y="358" width="250" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UmS-in-nCO">
+                                <rect key="frame" x="71.666666666666686" y="358" width="250" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="8d4-ZZ-CYK"/>
+                                    <constraint firstAttribute="height" constant="39" id="pzB-Oh-fYa"/>
+                                </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="This is a recyclable cardboard!">
                                         <attributes>
@@ -157,9 +189,12 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvi-Ft-31z">
-                                <rect key="frame" x="27" y="415" width="166" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hvi-Ft-31z">
+                                <rect key="frame" x="33" y="415" width="153.66666666666666" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Pux-QY-wRP"/>
+                                    <constraint firstAttribute="width" constant="153.66999999999999" id="wwb-Fk-Olo"/>
+                                </constraints>
                                 <color key="tintColor" red="0.37647059560000001" green="0.61960786580000005" blue="0.48235297199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Carbon Footprint"/>
@@ -167,9 +202,12 @@
                                     <action selector="carbonFootprintPressed:" destination="shS-un-vM3" eventType="touchUpInside" id="yQb-1p-gd0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHi-Lu-RrV">
-                                <rect key="frame" x="201" y="415" width="166" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHi-Lu-RrV">
+                                <rect key="frame" x="207" y="415" width="152.33333333333337" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="0Cj-oC-35g"/>
+                                    <constraint firstAttribute="width" constant="152.33000000000001" id="nHW-Ay-nzZ"/>
+                                </constraints>
                                 <color key="tintColor" red="0.37647059560000001" green="0.61960786580000005" blue="0.48235297199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Resource Impact"/>
@@ -177,9 +215,12 @@
                                     <action selector="resourceImpactPressed:" destination="shS-un-vM3" eventType="touchUpInside" id="HFd-n3-6th"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY9-Xo-glJ">
-                                <rect key="frame" x="27" y="487" width="166" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PY9-Xo-glJ">
+                                <rect key="frame" x="32" y="487" width="154" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="fMS-Rq-ib8"/>
+                                    <constraint firstAttribute="width" constant="154" id="x6w-QW-yOB"/>
+                                </constraints>
                                 <color key="tintColor" red="0.37647059560000001" green="0.61960786580000005" blue="0.48235297199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Energy Savings"/>
@@ -187,9 +228,12 @@
                                     <action selector="energySavingsPressed:" destination="shS-un-vM3" eventType="touchUpInside" id="751-T5-bsx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZQ-PK-Tek">
-                                <rect key="frame" x="201" y="487" width="166" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AZQ-PK-Tek">
+                                <rect key="frame" x="207" y="487" width="153" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="Twu-hw-pda"/>
+                                    <constraint firstAttribute="width" constant="153" id="zXE-ef-iLq"/>
+                                </constraints>
                                 <color key="tintColor" red="0.37647059560000001" green="0.61960786580000005" blue="0.48235297199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Recycling Tips"/>
@@ -197,19 +241,12 @@
                                     <action selector="recyclingTipsPressed:" destination="shS-un-vM3" eventType="touchUpInside" id="cKq-xp-Iy4"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-Rv-Bju">
-                                <rect key="frame" x="27" y="559" width="166" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.37647059560000001" green="0.61960786580000005" blue="0.48235297199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Environmental Stats #1"/>
-                                <connections>
-                                    <action selector="factsPressed:" destination="shS-un-vM3" eventType="touchUpInside" id="rMY-Ha-Rvw"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfk-id-G18">
-                                <rect key="frame" x="201" y="559" width="166" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfk-id-G18">
+                                <rect key="frame" x="207" y="559" width="153" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="153" id="NqD-JU-geD"/>
+                                    <constraint firstAttribute="height" constant="64" id="eHI-KG-B9X"/>
+                                </constraints>
                                 <color key="tintColor" red="0.37647059560000001" green="0.61960786580000005" blue="0.48235297199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Environmental Stats #2"/>
@@ -217,9 +254,41 @@
                                     <action selector="facts2Pressed:" destination="shS-un-vM3" eventType="touchUpInside" id="MYH-gL-bCb"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODN-Rv-Bju">
+                                <rect key="frame" x="33" y="559" width="154" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="P2w-jz-0dJ"/>
+                                    <constraint firstAttribute="height" constant="64" id="oBE-zh-bd0"/>
+                                </constraints>
+                                <color key="tintColor" red="0.37647059560000001" green="0.61960786580000005" blue="0.48235297199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Environmental Stats #1"/>
+                                <connections>
+                                    <action selector="factsPressed:" destination="shS-un-vM3" eventType="touchUpInside" id="rMY-Ha-Rvw"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Qtz-bP-NaI"/>
                         <color key="backgroundColor" red="0.98039215800000001" green="0.96862745289999996" blue="0.95686274770000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="ODN-Rv-Bju" firstAttribute="top" secondItem="PY9-Xo-glJ" secondAttribute="bottom" constant="8" id="553-Br-klN"/>
+                            <constraint firstItem="Qtz-bP-NaI" firstAttribute="trailing" secondItem="AZQ-PK-Tek" secondAttribute="trailing" constant="33" id="5dr-Gh-CCh"/>
+                            <constraint firstItem="Qtz-bP-NaI" firstAttribute="trailing" secondItem="Lfk-id-G18" secondAttribute="trailing" constant="33" id="F5E-uW-x6t"/>
+                            <constraint firstItem="Lfk-id-G18" firstAttribute="top" secondItem="AZQ-PK-Tek" secondAttribute="bottom" constant="8" id="Ggg-rU-Bzs"/>
+                            <constraint firstItem="mHi-Lu-RrV" firstAttribute="top" secondItem="UmS-in-nCO" secondAttribute="bottom" constant="18" id="Kfa-o2-gOQ"/>
+                            <constraint firstItem="Hvi-Ft-31z" firstAttribute="leading" secondItem="Qtz-bP-NaI" secondAttribute="leading" constant="33" id="ZbQ-YW-CBG"/>
+                            <constraint firstItem="Qtz-bP-NaI" firstAttribute="trailing" secondItem="mHi-Lu-RrV" secondAttribute="trailing" constant="33.670000000000002" id="bXI-LX-okj"/>
+                            <constraint firstItem="UmS-in-nCO" firstAttribute="centerX" secondItem="nNY-0a-5Pm" secondAttribute="centerX" id="btn-wr-5jn"/>
+                            <constraint firstItem="PY9-Xo-glJ" firstAttribute="top" secondItem="Hvi-Ft-31z" secondAttribute="bottom" constant="8" symbolic="YES" id="dkc-QC-Udw"/>
+                            <constraint firstItem="PY9-Xo-glJ" firstAttribute="leading" secondItem="Qtz-bP-NaI" secondAttribute="leading" constant="32" id="fSr-ZA-vM0"/>
+                            <constraint firstItem="UmS-in-nCO" firstAttribute="top" secondItem="plS-Y6-nwP" secondAttribute="bottom" constant="8" id="fgZ-ZW-nS8"/>
+                            <constraint firstItem="Hvi-Ft-31z" firstAttribute="top" secondItem="UmS-in-nCO" secondAttribute="bottom" constant="18" id="kGa-O1-oxY"/>
+                            <constraint firstItem="vxF-FW-9wW" firstAttribute="top" secondItem="nNY-0a-5Pm" secondAttribute="top" constant="-17" id="qUO-Ty-TqA"/>
+                            <constraint firstItem="plS-Y6-nwP" firstAttribute="top" secondItem="vxF-FW-9wW" secondAttribute="bottom" constant="35" id="s9r-r3-tpe"/>
+                            <constraint firstItem="ODN-Rv-Bju" firstAttribute="leading" secondItem="Qtz-bP-NaI" secondAttribute="leading" constant="33" id="tde-Sw-Ufa"/>
+                            <constraint firstItem="plS-Y6-nwP" firstAttribute="centerX" secondItem="nNY-0a-5Pm" secondAttribute="centerX" id="u5j-iU-bw7"/>
+                            <constraint firstItem="AZQ-PK-Tek" firstAttribute="top" secondItem="mHi-Lu-RrV" secondAttribute="bottom" constant="8" id="xYz-Of-8rg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RQp-5O-3Js"/>
                     <connections>
