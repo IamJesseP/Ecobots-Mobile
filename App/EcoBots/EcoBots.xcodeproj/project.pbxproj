@@ -15,6 +15,7 @@
 		382B99102AFEA89D0072DF3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 382B990E2AFEA89D0072DF3E /* LaunchScreen.storyboard */; };
 		382B99182AFED23F0072DF3E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382B99172AFED23F0072DF3E /* DetailViewController.swift */; };
 		382B991A2AFED2790072DF3E /* responseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382B99192AFED2790072DF3E /* responseData.swift */; };
+		382B991C2AFEFFE20072DF3E /* RecycleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 382B991B2AFEFFE20072DF3E /* RecycleInfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		382B99112AFEA89D0072DF3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		382B99172AFED23F0072DF3E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		382B99192AFED2790072DF3E /* responseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = responseData.swift; sourceTree = "<group>"; };
+		382B991B2AFEFFE20072DF3E /* RecycleInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycleInfoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				382B99052AFEA89C0072DF3E /* SceneDelegate.swift */,
 				382B99072AFEA89C0072DF3E /* RecycleViewController.swift */,
 				382B99172AFED23F0072DF3E /* DetailViewController.swift */,
+				382B991B2AFEFFE20072DF3E /* RecycleInfoViewController.swift */,
 				382B99192AFED2790072DF3E /* responseData.swift */,
 				382B99092AFEA89C0072DF3E /* Main.storyboard */,
 				382B990C2AFEA89D0072DF3E /* Assets.xcassets */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				382B991C2AFEFFE20072DF3E /* RecycleInfoViewController.swift in Sources */,
 				382B99082AFEA89C0072DF3E /* RecycleViewController.swift in Sources */,
 				382B99042AFEA89C0072DF3E /* AppDelegate.swift in Sources */,
 				382B991A2AFED2790072DF3E /* responseData.swift in Sources */,

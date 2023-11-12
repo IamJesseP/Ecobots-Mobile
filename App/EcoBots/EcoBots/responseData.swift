@@ -14,6 +14,7 @@ struct ResponseData: Codable {
         let carbonFootprint: String
         let facts: [String]
         let recyclingTip: String
+        let energySavings: String
         let resourceConservation: String
     }
 
