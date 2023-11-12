@@ -16,6 +16,7 @@ struct ResponseData: Codable {
         let recyclingTip: String
         let energySavings: String
         let resourceConservation: String
+        let type: String
     }
 
     let result: Result

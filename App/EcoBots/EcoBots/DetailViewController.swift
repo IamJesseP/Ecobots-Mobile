@@ -37,6 +37,7 @@ class DetailViewController: UIViewController {
         }
     }
     
+    
     @IBAction func carbonFootprintPressed(_ sender: UIButton) {
         currentState = .carbonFootprint
                 performSegue(withIdentifier: "RecycleInfo", sender: self)
@@ -70,6 +71,8 @@ class DetailViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RecycleInfo",
            let destinationVC = segue.destination as? RecycleInfoViewController {
+            destinationVC.modalPresentationStyle = .custom
+            destinationVC.transitioningDelegate = customTransitionDelegate
             destinationVC.receivedState = currentState
             switch currentState {
             case .carbonFootprint:
