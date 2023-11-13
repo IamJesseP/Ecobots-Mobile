@@ -10,30 +10,32 @@ import UIKit
 class DetailViewController: UIViewController {
     var responseData: ResponseData?
     var currentState: DetailViewState?
+    var capturedImage: UIImage?
     
     @IBOutlet weak var responseLabel: UILabel!
     @IBOutlet weak var carbonFootprintBtn: UIButton!
     @IBOutlet weak var resourceImpactBtn: UIButton!
     @IBOutlet weak var energySavingsBtn: UIButton!
     @IBOutlet weak var recyclingTipsBtn: UIButton!
-    @IBOutlet weak var factsBtn: UIButton!
-    @IBOutlet weak var factsBtn2: UIButton!
+    @IBOutlet weak var capturedImageView: UIImageView!
     
     enum DetailViewState {
         case carbonFootprint
         case resourceImpact
         case energySavings
         case recyclingTips
-        case facts
-        case facts2
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Example of using responseData to update UI
+        
         if let responseData = responseData {
             responseLabel.text = responseData.result.response
-            print(responseData)
+        }
+        if let image = capturedImage {
+            capturedImageView.image = image
+        } else {
+            print("Image is nil")
         }
     }
     
@@ -58,16 +60,9 @@ class DetailViewController: UIViewController {
                 performSegue(withIdentifier: "RecycleInfo", sender: self)
     }
     
-    @IBAction func factsPressed(_ sender: UIButton) {
-        currentState = .facts
-                performSegue(withIdentifier: "RecycleInfo", sender: self)
-    }
     
-    @IBAction func facts2Pressed(_ sender: UIButton) {
-        currentState = .facts2
-                performSegue(withIdentifier: "RecycleInfo", sender: self)
-    }
     
+    // passing state, specific json data, and custom modal
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "RecycleInfo",
            let destinationVC = segue.destination as? RecycleInfoViewController {
@@ -83,8 +78,6 @@ class DetailViewController: UIViewController {
                 destinationVC.data = responseData?.result.energySavings
             case .recyclingTips:
                 destinationVC.data = responseData?.result.recyclingTip
-            case .facts:
-                destinationVC.data = responseData?.result.facts[0]
             default:
                 break
             }

@@ -13,12 +13,15 @@ class RecycleViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         loadingIcon.isHidden = true
         loadingLabel.isHidden = true
-        // Do any additional setup after loading the view.
+
     }
 
+    var capturedImage: UIImage?
+    
     @IBOutlet weak var loadingLabel: UILabel!
     @IBOutlet weak var loadingIcon: UIActivityIndicatorView!
     @IBOutlet weak var recycleLabel: UILabel!
+    
     
     
     @IBAction func recycleButton(_ sender: Any) {
@@ -44,8 +47,8 @@ class RecycleViewController: UIViewController, UIImagePickerControllerDelegate, 
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-        if let capturedImage = info[.originalImage] as? UIImage {
-            handleCapturedImage(capturedImage)
+        if let image = info[.originalImage] as? UIImage {
+            handleCapturedImage(image)
         }
         picker.dismiss(animated: true, completion: nil)
     }
@@ -55,6 +58,8 @@ class RecycleViewController: UIViewController, UIImagePickerControllerDelegate, 
             // Handle the error of image conversion
             return
         }
+        self.capturedImage = image
+        print("Captured image set: \(image)")
         sendImageToAPI(imageData: imageData, imageName: "photo")
 
     }
@@ -130,6 +135,7 @@ class RecycleViewController: UIViewController, UIImagePickerControllerDelegate, 
             if let destinationVC = segue.destination as? DetailViewController,
                let dataToSend = sender as? ResponseData {
                 destinationVC.responseData = dataToSend
+                destinationVC.capturedImage = self.capturedImage
             }
         }
     }
