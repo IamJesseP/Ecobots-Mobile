@@ -120,11 +120,17 @@ An intuitive platform to quantify the significance of their recycling practices.
   
 **Sprint 2:**
 * Add core functionality:
-     * Tab navigation
-     * Camera access
-     * API networking
-     *  Data display
- 
+     * Tab navigation [x]
+     * Camera access [x]
+     * API networking [x]
+     *  Data display [x]
+* <div>
+    <a href="https://www.loom.com/share/a71c81fab2f84434b3be94ac32be25ee">
+    </a>
+    <a href="https://www.loom.com/share/a71c81fab2f84434b3be94ac32be25ee">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a71c81fab2f84434b3be94ac32be25ee-with-play.gif">
+    </a>
+  </div>
   
 **Sprint 3:**
 * Add optional functionality:
